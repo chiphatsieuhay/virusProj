@@ -24,6 +24,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -104,6 +105,10 @@ public class VirusWOTableSceneController implements Initializable,switchTo,brows
     private TextArea sequelae;
     @FXML
     private TextField infectionProcess;
+    @FXML
+    private TextArea ImageInfo;
+    @FXML
+    private ImageView image;
     @FXML
     void displaySelected(MouseEvent e) {
     	VirusWOModel virus = table.getSelectionModel().getSelectedItem();

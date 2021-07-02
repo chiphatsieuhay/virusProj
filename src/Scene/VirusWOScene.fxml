@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -23,7 +24,7 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Button layoutX="513.0" layoutY="474.0" mnemonicParsing="false" onAction="#switchToStart" text="Return">
+            <Button layoutY="474.0" mnemonicParsing="false" onAction="#switchToStart" text="Return">
                <font>
                   <Font size="20.0" />
                </font>
@@ -52,12 +53,15 @@
             <TextArea fx:id="basicElements" editable="false" layoutX="401.0" layoutY="94.0" prefHeight="37.0" prefWidth="189.0" />
             <TextArea fx:id="treatment" editable="false" layoutX="401.0" layoutY="218.0" prefHeight="42.0" prefWidth="188.0" />
             <TextArea fx:id="sequelae" editable="false" layoutX="401.0" layoutY="287.0" prefHeight="43.0" prefWidth="188.0" />
-            <Button layoutX="513.0" layoutY="423.0" mnemonicParsing="false" onAction="#browse" prefHeight="45.0" prefWidth="88.0" text="Watch" />
+            <Button layoutX="110.0" layoutY="474.0" mnemonicParsing="false" onAction="#browse" prefHeight="45.0" prefWidth="88.0" text="Watch" />
+            <ImageView fx:id="image" fitHeight="475.0" fitWidth="488.0" layoutX="604.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="ImageInfo" layoutX="386.0" layoutY="472.0" prefHeight="54.0" prefWidth="706.0" />
+            <Button layoutX="233.0" layoutY="474.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="147.0" text="Investigate" />
          </children>
       </AnchorPane>
    </center>
    <top>
-      <AnchorPane prefHeight="82.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="63.0" prefWidth="1092.0" BorderPane.alignment="CENTER">
          <children>
             <Text layoutX="103.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus WITHOUT lipid envelope" textAlignment="CENTER">
                <font>
