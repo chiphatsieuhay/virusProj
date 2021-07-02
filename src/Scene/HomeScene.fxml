@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scene.SceneController">
+   <center>
+      <AnchorPane prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="168.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team 7 Virus App">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button layoutX="231.0" layoutY="146.0" mnemonicParsing="false" onAction="#switchToStart" prefHeight="44.0" prefWidth="154.0" text="Start">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="231.0" layoutY="268.0" mnemonicParsing="false" onAction="#switchToHelp" prefHeight="44.0" prefWidth="155.0" text="Help">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="231.0" layoutY="394.0" mnemonicParsing="false" onAction="#exit" prefHeight="44.0" prefWidth="156.0" text="Exit">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

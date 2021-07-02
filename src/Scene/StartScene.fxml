@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scene.SceneController">
+   <center>
+      <AnchorPane prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="144.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose A Virus Type!" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button layoutX="169.0" layoutY="179.0" mnemonicParsing="false" onAction="#switchToVirusW" prefHeight="44.0" prefWidth="287.0" text="Virus with lipid envelope">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="169.0" layoutY="268.0" mnemonicParsing="false" onAction="#switchToVirusWO" prefHeight="44.0" prefWidth="287.0" text="Virus without lipid envelope">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="169.0" layoutY="368.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="44.0" prefWidth="288.0" text="Return">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

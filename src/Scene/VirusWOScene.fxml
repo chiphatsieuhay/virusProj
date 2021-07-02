@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scene.VirusWOTableSceneController">
+   <center>
+      <AnchorPane prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" prefHeight="474.0" prefWidth="380.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="109.0" text="Name" />
+                <TableColumn fx:id="levelColumn" minWidth="0.0" prefWidth="138.0" text="Danger Level" />
+                  <TableColumn fx:id="vaccineColumn" prefWidth="132.0" text="Column X" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchField" layoutX="403.0" layoutY="25.0" />
+            <Text layoutX="403.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Box:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="513.0" layoutY="474.0" mnemonicParsing="false" onAction="#switchToStart" text="Return">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text layoutX="403.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Elements:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="403.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Infection Process:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="406.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treatment:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="403.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sequelae:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="infectionProcess" editable="false" layoutX="403.0" layoutY="156.0" mouseTransparent="true" />
+            <TextArea fx:id="basicElements" editable="false" layoutX="401.0" layoutY="94.0" prefHeight="37.0" prefWidth="189.0" />
+            <TextArea fx:id="treatment" editable="false" layoutX="401.0" layoutY="218.0" prefHeight="42.0" prefWidth="188.0" />
+            <TextArea fx:id="sequelae" editable="false" layoutX="401.0" layoutY="287.0" prefHeight="43.0" prefWidth="188.0" />
+            <Button layoutX="513.0" layoutY="423.0" mnemonicParsing="false" onAction="#browse" prefHeight="45.0" prefWidth="88.0" text="Watch" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="103.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus WITHOUT lipid envelope" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

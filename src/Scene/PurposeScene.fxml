@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Scene.SceneController">
+   <center>
+      <AnchorPane prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This app for project midterm only!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All the credits belong to the members of team 7!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do not copy! Do it yourself!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This app contains some virus information!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can use this app incase you are too lazy to go to Google!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By the way, this app is our plan B since it is required to be a Java app.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you want to see our plan A just say it &lt;3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="14.0" layoutY="491.0" mnemonicParsing="false" onAction="#switchToHelp" prefHeight="31.0" prefWidth="142.0" text="Return" />
+            <Text layoutX="14.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Done with reading? Press Return please!!!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

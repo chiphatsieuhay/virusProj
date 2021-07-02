@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Scene.SceneController">
+   <center>
+      <AnchorPane prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This app contains some virus infomation!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To use the app, press Start in the home scene.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you need some help, press Help!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tired? Just press Exit!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="7.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Start Scene, choose 1 type of virus(you have 2 types if you cannot see).">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="7.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Just click on a random virus name to see its detail information.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="7.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can watch some video if it is available.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="16.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get lost somewhere? Press Return dumbass!!!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="263.0" layoutY="491.0" mnemonicParsing="false" onAction="#switchToHelp" prefHeight="31.0" prefWidth="111.0" text="Return" />
+            <Text layoutX="275.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="3.5888671875" />
+            <Text layoutX="271.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V" wrappingWidth="11.31640625" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
