@@ -1,9 +1,6 @@
 package Scene;
 
-import java.awt.Desktop;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -14,21 +11,13 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
-public class VirusWTableSceneController implements Initializable,switchTo,browsing{
+public class VirusWTableSceneController extends VirusTableSceneController implements Initializable{
 	@FXML
 	private TableView<VirusWModel> table;
 	@FXML
@@ -102,92 +91,28 @@ public class VirusWTableSceneController implements Initializable,switchTo,browsi
 		table.setItems(sortedData);
 		
 		table.setOnMouseClicked(e->{
-			displaySelected(e);
+			try {
+				displaySelected(e);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		});
 	}
-    @FXML
-    private TextField searchField;
-    private Stage stage;
-	private Scene scene;
-	private Parent root;
-    public void switchToStart(ActionEvent event) throws IOException {
-		 switchToScene(event,"StartScene.fxml");
+	@FXML
+	public void switchStart(ActionEvent e) throws IOException {
+		switchToStart(e);
 	}
-    @FXML
-    private TextArea basicElements;
-    @FXML
-    private TextArea treatment;
-    @FXML
-    private TextArea sequelae;
-    @FXML
-    private TextField lipid;
-    @FXML
-    private TextField infectionProcess;
-    @FXML
-    private TextArea ImageInfo;
-    @FXML
-    private ImageView image;
-    
-    @FXML
-    void displaySelected(MouseEvent e) {
+	@FXML
+    void displaySelected(MouseEvent e) throws IOException {
     	VirusWModel virus = table.getSelectionModel().getSelectedItem();
-    	String BE = virus.getBasicElements();
-    	if(BE == null || BE.isEmpty()) {
-    		basicElements.setText("Nothing selected!");
-    	}else {
-    		basicElements.setText(BE);
-    	}
-    	String IP = virus.getInfectionProcess();
-    	if(IP == null || IP.isEmpty()) {
-    		infectionProcess.setText("Nothing selected!");
-    	}else {
-    		infectionProcess.setText(IP);
-    	}
-    	String T = virus.getTreatment();
-    	if(T == null || T.isEmpty()) {
-    		treatment.setText("Nothing selected!");
-    	}else {
-    		treatment.setText(T);
-    	}
-    	String S = virus.getSequelae();
-    	if(S == null || S.isEmpty()) {
-    		sequelae.setText("Nothing selected!");
-    	}else {
-    		sequelae.setText(S);
-    	}
-    	float LL = virus.getnumber_lipid_layer();
-    	if(String.valueOf(LL) == null || String.valueOf(LL).isEmpty()) {
-    		lipid.setText("Nothing selected!");
-    	}else {
-    		lipid.setText(String.valueOf(LL));
-    	}
-    	
-    }
-
-    @FXML
+    	display(e,virus);
+		int LL = virus.getNumber_lipid_layer();
+		lipid.setText(String.valueOf(LL));
+	}
+	@FXML
     void browse(ActionEvent event) {
     	String IP = table.getSelectionModel().getSelectedItem().getInfectionProcess();
     	browse(event,IP);
     }
-    @Override
-    public void browse(ActionEvent event,String IP) {
-    	Desktop d = Desktop.getDesktop();
-    	try {
-			d.browse(new URI(IP));
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (URISyntaxException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-    }
-	@Override
-	public void switchToScene(ActionEvent event, String sceneRoot) throws IOException {
-		 root = FXMLLoader.load(getClass().getResource(sceneRoot));
-		 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		 scene = new Scene(root);
-		 stage.setScene(scene);
-		 stage.show();
-	}
 }

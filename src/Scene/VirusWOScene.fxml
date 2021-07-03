@@ -9,7 +9,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scene.VirusWOTableSceneController">
    <center>
-      <AnchorPane prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+      <AnchorPane onDragDetected="#switchStart" prefHeight="536.0" prefWidth="616.0" BorderPane.alignment="CENTER">
          <children>
             <TableView fx:id="table" prefHeight="474.0" prefWidth="380.0">
               <columns>
@@ -54,7 +54,10 @@
             <TextArea fx:id="treatment" editable="false" layoutX="401.0" layoutY="218.0" prefHeight="42.0" prefWidth="188.0" />
             <TextArea fx:id="sequelae" editable="false" layoutX="401.0" layoutY="287.0" prefHeight="43.0" prefWidth="188.0" />
             <Button layoutX="110.0" layoutY="474.0" mnemonicParsing="false" onAction="#browse" prefHeight="45.0" prefWidth="88.0" text="Watch" />
-            <ImageView fx:id="image" fitHeight="475.0" fitWidth="488.0" layoutX="604.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image" fitHeight="475.0" fitWidth="488.0" layoutX="604.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/coronavirus_PNG46.png" />
+               </image></ImageView>
             <TextArea fx:id="ImageInfo" layoutX="386.0" layoutY="472.0" prefHeight="54.0" prefWidth="706.0" />
             <Button layoutX="233.0" layoutY="474.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="147.0" text="Investigate" />
          </children>

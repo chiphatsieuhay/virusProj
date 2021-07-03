@@ -24,7 +24,7 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Button layoutX="14.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchToStart" text="Return">
+            <Button layoutX="14.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchStart" text="Return">
                <font>
                   <Font size="20.0" />
                </font>
@@ -60,7 +60,10 @@
             <TextArea fx:id="treatment" editable="false" layoutX="401.0" layoutY="219.0" prefHeight="36.0" prefWidth="201.0" />
             <TextArea fx:id="sequelae" editable="false" layoutX="401.0" layoutY="282.0" prefHeight="40.0" prefWidth="200.0" />
             <Button layoutX="123.0" layoutY="476.0" mnemonicParsing="false" onAction="#browse" prefHeight="48.0" prefWidth="88.0" text="Watch" />
-            <ImageView fx:id="image" fitHeight="480.0" fitWidth="439.0" layoutX="625.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image" fitHeight="480.0" fitWidth="439.0" layoutX="625.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/coronavirus_PNG46.png" />
+               </image></ImageView>
             <TextArea fx:id="ImageInfo" layoutX="385.0" layoutY="472.0" prefHeight="57.0" prefWidth="679.0" />
             <Button layoutX="234.0" layoutY="473.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="147.0" text="Investigate" />
          </children>
