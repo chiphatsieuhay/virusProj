@@ -59,7 +59,7 @@
                   <Image url="@../Image/coronavirus_PNG46.png" />
                </image></ImageView>
             <TextArea fx:id="ImageInfo" layoutX="386.0" layoutY="472.0" prefHeight="54.0" prefWidth="706.0" />
-            <Button layoutX="233.0" layoutY="474.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="147.0" text="Investigate" />
+            <Button layoutX="233.0" layoutY="474.0" mnemonicParsing="false" onAction="#displayProcess" prefHeight="45.0" prefWidth="147.0" text="Investigate" />
          </children>
       </AnchorPane>
    </center>

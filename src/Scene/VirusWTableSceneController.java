@@ -115,4 +115,8 @@ public class VirusWTableSceneController extends VirusTableSceneController implem
     	String IP = table.getSelectionModel().getSelectedItem().getInfectionProcess();
     	browse(event,IP);
     }
+    @FXML
+    void displayProcess(ActionEvent event) {
+
+    }
 }
