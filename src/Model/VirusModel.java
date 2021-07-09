@@ -54,6 +54,12 @@ public abstract class VirusModel{
 	protected String sequelae;
 	protected int dangerLevel;
 	protected Map<String,String> Process;
+	public Map<String, String> getProcess() {
+		return Process;
+	}
+	public void setProcess(Map<String, String> process) {
+		Process = process;
+	}
 	public VirusModel(String name,String basicElements,boolean vaccine,String infectionProcess,String treatment,String sequelae,int dangerLevel,Map<String,String> Process) {
 		this.name = name;
 		this.basicElements = basicElements;
@@ -62,7 +68,7 @@ public abstract class VirusModel{
 		this.treatment = treatment;
 		this.sequelae = sequelae;
 		this.dangerLevel = dangerLevel;
-		this.Process.putAll(Process);
+		this.Process=Process;
 	}
 	public VirusModel() {};
 }

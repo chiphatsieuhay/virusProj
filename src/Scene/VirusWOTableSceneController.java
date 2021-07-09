@@ -1,7 +1,10 @@
 package Scene;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import Model.VirusWOModel;
@@ -15,9 +18,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
 public class VirusWOTableSceneController extends VirusTableSceneController implements Initializable{
+	private int count =0;
 	@FXML
 	private TableView<VirusWOModel> table;
 	@FXML
@@ -77,6 +82,8 @@ public class VirusWOTableSceneController extends VirusTableSceneController imple
 		table.setItems(sortedData);
 		table.setOnMouseClicked(e->{
 			try {
+				count =0;
+				ImageInfo.setText("");
 				displaySelected(e);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
@@ -99,7 +106,21 @@ public class VirusWOTableSceneController extends VirusTableSceneController imple
     	browse(event,IP);
     }
     @FXML
-    void displayProcess(ActionEvent event) {
-
+    void displayProcess(ActionEvent event) throws InterruptedException {
+    	VirusWOModel virus = table.getSelectionModel().getSelectedItem();
+    	Map<String, String> map = virus.getProcess();
+    	ArrayList<String>  string = new ArrayList<>();
+    	ArrayList<String>  link = new ArrayList<>();
+    	map.forEach((key,value)->{
+    		string.add(key);
+    		link.add(value);
+    	});
+    	if(count<string.size()) {
+    		ImageInfo.setText(string.get(count));
+    		File file = new File("/Image/virusWLipid/"+virus.getName()+"/"+link.get(count));
+            Image myImage = new Image(file.toURI().toString());
+    		image.setImage(myImage);
+    		count ++;
+    	}
     }
 }

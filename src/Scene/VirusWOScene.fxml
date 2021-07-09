@@ -54,7 +54,7 @@
             <TextArea fx:id="treatment" editable="false" layoutX="401.0" layoutY="218.0" prefHeight="42.0" prefWidth="188.0" />
             <TextArea fx:id="sequelae" editable="false" layoutX="401.0" layoutY="287.0" prefHeight="43.0" prefWidth="188.0" />
             <Button layoutX="110.0" layoutY="474.0" mnemonicParsing="false" onAction="#browse" prefHeight="45.0" prefWidth="88.0" text="Watch" />
-            <ImageView fx:id="image" fitHeight="475.0" fitWidth="488.0" layoutX="604.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="475.0" fitWidth="488.0" layoutX="604.0" layoutY="-2.0" pickOnBounds="true" smooth="false">
                <image>
                   <Image url="@../Image/coronavirus_PNG46.png" />
                </image></ImageView>
