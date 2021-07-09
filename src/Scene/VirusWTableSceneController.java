@@ -117,6 +117,5 @@ public class VirusWTableSceneController extends VirusTableSceneController implem
     }
     @FXML
     void displayProcess(ActionEvent event) {
-
     }
 }
