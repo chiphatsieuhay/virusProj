@@ -8,20 +8,14 @@ import java.net.URISyntaxException;
 import Model.VirusModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 public class VirusTableSceneController extends SceneController{	
     @FXML
     protected TextField searchField;
-    protected Stage stage;
-    protected Scene scene;
-    protected Parent root;
     @FXML
     protected TextArea basicElements;
     @FXML

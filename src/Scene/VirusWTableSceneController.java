@@ -34,7 +34,7 @@ public class VirusWTableSceneController extends VirusTableSceneController implem
 		WList = FXCollections.observableArrayList(
 				new VirusWModel("HIV", 
 						"a core of ribonucleic acid (RNA), called the genome, and a protein component that surrounds the genome, called a capsid.", 
-						false, "https://www.youtube.com/watch?v=ng22Ucr33aw", "can only delay, cannot cure", "lead to AIDS", 7, 3),
+						false, "https://www.youtube.com/watch?v=ng22Ucr33aw", "can only delay, cannot cure", "lead to AIDS", 7, 3,Data.HIV),
 				new VirusWModel("Covid19",
 						"RNA at core bound with nuclearprotein, viral envelope, envelope proteins and spike protein", 
 						true, "https://www.youtube.com/watch?v=j4Xiow30bGo", "no real treatment yet", "weakened your immune system", 5, 4),

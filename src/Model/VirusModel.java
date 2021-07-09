@@ -1,6 +1,8 @@
 package Model;
 
-public abstract class VirusModel {
+import java.util.Map;
+
+public abstract class VirusModel{
 	protected String name;
 	public String getName() {
 		return name;
@@ -51,7 +53,8 @@ public abstract class VirusModel {
 	protected String treatment;
 	protected String sequelae;
 	protected int dangerLevel;
-	public VirusModel(String name,String basicElements,boolean vaccine,String infectionProcess,String treatment,String sequelae,int dangerLevel) {
+	protected Map<String,String> Process;
+	public VirusModel(String name,String basicElements,boolean vaccine,String infectionProcess,String treatment,String sequelae,int dangerLevel,Map<String,String> Process) {
 		this.name = name;
 		this.basicElements = basicElements;
 		this.vaccine = vaccine;
@@ -59,6 +62,7 @@ public abstract class VirusModel {
 		this.treatment = treatment;
 		this.sequelae = sequelae;
 		this.dangerLevel = dangerLevel;
+		this.Process.putAll(Process);
 	}
 	public VirusModel() {};
 }

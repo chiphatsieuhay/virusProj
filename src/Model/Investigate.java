@@ -2,10 +2,10 @@ package Model;
 public class Investigate {
     protected String title;
     protected String linkImage;
-    public void getTitle() {
+    public String getTitle() {
 		return title;
 	}
-    public void getLinkImage() {
+    public String getLinkImage() {
 		return linkImage;
 	}
     public Investigate(String title,String linkImage) {
